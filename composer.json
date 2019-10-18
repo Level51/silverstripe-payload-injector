@@ -1,0 +1,29 @@
+{
+    "name": "level51/silverstripe-payload-injector",
+    "version": "0.1.0",
+    "description": "Utility for injecting JSON payload into the DOM at render time.",
+    "homepage": "https://github.com/level51/silverstripe-payload-injector",
+    "keywords": [
+        "silverstripe",
+        "silverstripe-middleware",
+        "injection",
+        "dom-injection",
+        "payload-injection"
+    ],
+    "type": "silverstripe-vendormodule",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julian Scheuchenzuber",
+            "email": "js@lvl51.de"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/level51/silverstripe-payload-injector/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Level51\\PayloadInjector\\": "src/"
+        }
+    }
+}
