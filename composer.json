@@ -18,6 +18,9 @@
             "email": "js@lvl51.de"
         }
     ],
+    "require": {
+        "silverstripe/framework": "^4.0"
+    },
     "support": {
         "issues": "https://github.com/level51/silverstripe-payload-injector/issues"
     },
