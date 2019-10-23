@@ -40,6 +40,13 @@ public function index() {
 
 ...in your template.
 
+## Config
+
+```yml
+Level51\PayloadInjector\PayloadInjector:
+  merge_recursive: true     # Merge payload recursively to avoid overriding existing data (default: true)
+```
+
 ## Maintainer
 
 - Julian Scheuchenzuber <js@lvl51.de>

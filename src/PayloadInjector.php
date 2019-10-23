@@ -2,11 +2,21 @@
 
 namespace Level51\PayloadInjector;
 
+use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Injector\Injectable;
 
 class PayloadInjector {
 
     use Injectable;
+    use Configurable;
+
+    /**
+     * @config
+     *
+     * Merge payload recursively to avoid overriding existing data
+     * @var bool
+     */
+    private static $merge_recursive = true;
 
     /**
      * Staged payload for DOM injection
@@ -25,7 +35,9 @@ class PayloadInjector {
     public function stage(array $data) {
         if (!is_array($data)) throw new PayloadInjectorException('Only array data can be staged.');
 
-        $this->payload = array_merge($this->payload, $data);
+        $this->payload = $this->config()->get('merge_recursive') ?
+            array_merge_recursive($this->payload, $data) :
+            array_merge($this->payload, $data);
 
         return $this;
     }
