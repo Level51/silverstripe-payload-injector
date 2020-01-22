@@ -43,6 +43,13 @@ class PayloadInjector {
     }
 
     /**
+     * Clear previously staged data
+     */
+    public function clearStage() {
+        $this->payload = [];
+    }
+
+    /**
      * @return bool
      */
     public function hasPayload() {
