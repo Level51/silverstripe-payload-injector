@@ -7,4 +7,4 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\Control\Director:
     properties:
       Middlewares:
-        PayloadInjectionMiddleware: %$Level51\PayloadInjector\PayloadInjectionMiddleware
+        PayloadInjectionMiddleware: '%$Level51\PayloadInjector\PayloadInjectionMiddleware'
