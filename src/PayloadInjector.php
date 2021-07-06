@@ -86,6 +86,13 @@ class PayloadInjector {
     }
 
     /**
+     * @return array
+     */
+    public function getPayload() {
+        return $this->payload;
+    }
+
+    /**
      * @return false|string
      */
     public function commit() {
