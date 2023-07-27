@@ -36,7 +36,7 @@ class PayloadInjectionMiddleware implements HTTPMiddleware {
         /* @var HTTPResponse $response */
         $response = $delegate($request);
 
-        if ($response !== null && $this->injector->hasPayload()) {
+        if ($response !== null && $response->getBody() && $this->injector->hasPayload()) {
             $response->setBody($this->injectIntoDom($response->getBody()));
         }
 
@@ -58,7 +58,7 @@ class PayloadInjectionMiddleware implements HTTPMiddleware {
         if ($scriptPos !== false) {
             return substr_replace(
                 $body,
-                $this->injector->render() . $scriptNeedle,
+                $replacement . $scriptNeedle,
                 $scriptPos,
                 strlen($scriptNeedle));
         }
@@ -68,7 +68,7 @@ class PayloadInjectionMiddleware implements HTTPMiddleware {
         if ($bodyPos !== false) {
             return substr_replace(
                 $body,
-                $this->injector->render() . $bodyNeedle,
+                $replacement . $bodyNeedle,
                 $bodyPos,
                 strlen($bodyNeedle)
             );
