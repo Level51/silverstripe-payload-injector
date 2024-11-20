@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "^4.0"
+        "silverstripe/framework": "^4 | ^5"
     },
     "support": {
         "issues": "https://github.com/level51/silverstripe-payload-injector/issues"
