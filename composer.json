@@ -1,6 +1,5 @@
 {
     "name": "level51/silverstripe-payload-injector",
-    "version": "0.1.5",
     "description": "Utility for injecting JSON payload into the DOM at render time.",
     "homepage": "https://github.com/level51/silverstripe-payload-injector",
     "keywords": [
@@ -19,7 +18,8 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "^4 | ^5"
+        "php": "^8.3",
+        "silverstripe/framework": "^6"
     },
     "support": {
         "issues": "https://github.com/level51/silverstripe-payload-injector/issues"

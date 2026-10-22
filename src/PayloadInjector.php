@@ -106,6 +106,3 @@ class PayloadInjector {
         return "<script>window.payload = " . $this->commit() . "</script>";
     }
 }
-
-class PayloadInjectorException extends \Exception {
-}
